@@ -14,7 +14,6 @@ int buscarMaximo(int vector[]){
   }
   return ubicacionMaximo;
 }
-
 int provinciaQueRecibioMasPrestaciones(struct Facturas *facturasDeTuristas){
   int i;
   int acumuladorProvincias[3] = {0};
@@ -39,7 +38,6 @@ void totalDeDescuentoPorProvincia(struct Facturas facturasDeTuristas[],
                                             * porcentajeDescontar;
   }
 }
-
 void servicioMenosUtilizadoPorProvincia(struct Facturas facturasDeTuristas[], char **provincias){
   int contadorDeServicios[CANTIDAD_PROVINCIAS][CANTIDAD_SERVICIOS] = {{0}};
   int i, provincia, servicio;
@@ -53,7 +51,6 @@ void servicioMenosUtilizadoPorProvincia(struct Facturas facturasDeTuristas[], ch
             buscarServicioMenosUtilizado(contadorDeServicios, i));
   }
 }
-
 int buscarServicioMenosUtilizado(int contadorDeServicios[][CANTIDAD_SERVICIOS],int provincia)
 {
   int i, min;
@@ -64,7 +61,6 @@ int buscarServicioMenosUtilizado(int contadorDeServicios[][CANTIDAD_SERVICIOS],i
   }
   return min;
 }
-
 void imprimirDescuentos(float v[][CANTIDAD_SERVICIOS]){
 	int i,j;
 	for(i=0; i<CANTIDAD_PROVINCIAS;i++){
@@ -73,7 +69,6 @@ void imprimirDescuentos(float v[][CANTIDAD_SERVICIOS]){
 		}
 	}
 }
-
 void imprimirFacturas( struct Facturas facturasTuristas[] ){
   int i;
   for(i=0; i<CANTIDAD_FACTURAS; i++){
@@ -82,7 +77,6 @@ void imprimirFacturas( struct Facturas facturasTuristas[] ){
                                                   facturasTuristas[i].montoDeFactura);
   }
 }
-
 int menu(){
   int opcion;
   printf("%s\n%s\n%s\n%s\n%s\n","1- Provincia que recibio mas prestaciones en general",
@@ -94,12 +88,10 @@ int menu(){
   scanf("%d", &opcion);
   return opcion;
 }
-
 int cmpfunc (const void * a, const void * b)
 {
    return ( *(float*)a - *(float*)b );
 }
-
 void totalDescontadoPorServicio(float totalDescuentos[][CANTIDAD_SERVICIOS]){
   struct servicioDescuentoTotal acumuladorDescuentos[CANTIDAD_SERVICIOS];
   int i,j;
@@ -118,7 +110,6 @@ void totalDescontadoPorServicio(float totalDescuentos[][CANTIDAD_SERVICIOS]){
                                                   acumuladorDescuentos[i].montoTotalDeDescuento);
   }
 }
-
 void inicializarEstructuraServicioDescuento(struct servicioDescuentoTotal s[]){
   int i;
   for(i=0; i<CANTIDAD_SERVICIOS; i++){
