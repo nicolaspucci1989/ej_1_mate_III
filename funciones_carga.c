@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "header_carga.h"
 #include "estructuras_datos.h"
-
 //son 5 servicios y 3 provincias
 void cargarMatrizDescuentos(float v[][CANTIDAD_SERVICIOS]){
   //carga provincia 1
@@ -24,7 +23,6 @@ void cargarMatrizDescuentos(float v[][CANTIDAD_SERVICIOS]){
   v[2][3] = 25;
   v[2][4] = 10;
 }
-
 //son 10 facturas
 void cargaDeFacturas(struct Facturas str[]){
   str[0].numeroDeFactura = 293;
