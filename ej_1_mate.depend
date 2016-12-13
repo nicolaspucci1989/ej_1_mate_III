@@ -1,16 +1,16 @@
 # depslib dependency file v1.0
-1481378492 source:l:\projects\c\ej_1_mate\funciones.c
+1481575817 source:l:\projects\c\ej_1_mate\funciones.c
 	<stdio.h>
 	<assert.h>
 	"header.h"
 	"estructuras_datos.h"
 
-1481378597 l:\projects\c\ej_1_mate\header.h
+1481575736 l:\projects\c\ej_1_mate\header.h
 	"estructuras_datos.h"
 
-1481378902 l:\projects\c\ej_1_mate\estructuras_datos.h
+1481576077 l:\projects\c\ej_1_mate\estructuras_datos.h
 
-1481378529 source:l:\projects\c\ej_1_mate\funciones_carga.c
+1481576834 source:l:\projects\c\ej_1_mate\funciones_carga.c
 	<stdio.h>
 	<stdlib.h>
 	"header_carga.h"
@@ -20,7 +20,7 @@
 	"header_carga.h"
 	"estructuras_datos.h"
 
-1481378400 source:l:\projects\c\ej_1_mate\main.c
+1481576262 source:l:\projects\c\ej_1_mate\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>

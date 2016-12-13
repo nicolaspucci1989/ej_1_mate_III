@@ -16,5 +16,5 @@ void imprimirDescuentos(float v[][CANTIDAD_SERVICIOS]);
 void imprimirFacturas( struct Facturas facturasTuristas[] );
 int buscarServicioMenosUtilizado(int contadorDeServicios[][CANTIDAD_SERVICIOS],int provincia);
 void inicializarEstructuraServicioDescuento(struct servicioDescuentoTotal s[]);
-
+void ordenar(struct servicioDescuentoTotal acumuladorDescuentos[CANTIDAD_SERVICIOS]);
 #endif

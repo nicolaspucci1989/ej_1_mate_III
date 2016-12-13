@@ -97,14 +97,15 @@ void totalDescontadoPorServicio(float totalDescuentos[][CANTIDAD_SERVICIOS]){
   int i,j;
 
   inicializarEstructuraServicioDescuento(acumuladorDescuentos);
-
+  //acumular
   for(i=0; i<CANTIDAD_PROVINCIAS; i++){
     for(j=0; j<CANTIDAD_SERVICIOS; j++){
       acumuladorDescuentos[j].montoTotalDeDescuento += totalDescuentos[i][j];
     }
   }
-  //qsort(acumuladorDescuentos, CANTIDAD_SERVICIOS, sizeof(float), cmpfunc);
-
+  //ordenar
+  ordenar(acumuladorDescuentos);
+  //imprimir
   for(i=0; i<CANTIDAD_SERVICIOS; i++){
     printf("total descontado servicio %d: %.2f\n", acumuladorDescuentos[i].numeroDeServicio + 1,
                                                   acumuladorDescuentos[i].montoTotalDeDescuento);
@@ -115,5 +116,22 @@ void inicializarEstructuraServicioDescuento(struct servicioDescuentoTotal s[]){
   for(i=0; i<CANTIDAD_SERVICIOS; i++){
     s[i].numeroDeServicio = i;
     s[i].montoTotalDeDescuento = 0;
+  }
+}
+void ordenar(struct servicioDescuentoTotal acumuladorDescuentos[CANTIDAD_SERVICIOS]){
+  int i,j;
+  struct servicioDescuentoTotal aux;
+
+  for (i = 0 ; i < CANTIDAD_SERVICIOS; i++)
+  {
+    for (j = 0 ; j < CANTIDAD_SERVICIOS - 1; j++)
+    {
+      if (acumuladorDescuentos[j].montoTotalDeDescuento < acumuladorDescuentos[j+1].montoTotalDeDescuento)
+      {
+        aux = acumuladorDescuentos[j];
+        acumuladorDescuentos[j] = acumuladorDescuentos[j+1];
+        acumuladorDescuentos[j+1] = aux;
+      }
+    }
   }
 }
