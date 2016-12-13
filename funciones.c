@@ -44,6 +44,17 @@ void totalDeDescuentoPorProvincia(struct Facturas facturasDeTuristas[],
   }
 }
 
+void inicializarTotalDescuentos(float v[][CANTIDAD_SERVICIOS])
+{
+  int i,j;
+  for(i=0; i<CANTIDAD_PROVINCIAS; i++){
+    for(j=0; j<CANTIDAD_SERVICIOS; j++){
+      v[i][j] = 0;
+
+    }
+  }
+}
+
 void servicioMenosUtilizadoPorProvincia(struct Facturas facturasDeTuristas[], char **provincias)
 {
   int contadorDeServicios[CANTIDAD_PROVINCIAS][CANTIDAD_SERVICIOS] = {{0}};
@@ -166,4 +177,17 @@ int comparacion(const void *a, const void *b)
   /* float comparison: returns negative if b > a
   and positive if a > b. We multiplied result by 100.0
   to preserve decimal fraction */
+}
+
+void ingresoFacturas(struct Facturas fact[CANTIDAD_FACTURAS], int numeroRegistro)
+{
+  printf("Ingrese numero de factura\n");
+  scanf("%d", &fact[numeroRegistro].numeroDeFactura);
+  while(fact[numeroRegistro].numeroDeFactura){
+    printf("Ingrese numero de provincia\n");
+    printf("Ingrese numero de servicio\n");
+    printf("Ingrese monto de factura\n");
+    numeroRegistro++;
+    printf("Ingrese numero de factura\n");
+  }
 }

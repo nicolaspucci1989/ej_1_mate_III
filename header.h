@@ -2,7 +2,7 @@
 #define HEADER_H
 #include "estructuras_datos.h"
 
-int menu();
+int menu(void);
 int cmpfunc (const void * a, const void * b);
 int provinciaQueRecibioMasPrestaciones(struct Facturas *facturas_de_turistas);
 void totalDeDescuentoPorProvincia(struct Facturas facturasDeTuristas[],
@@ -18,4 +18,6 @@ int buscarServicioMenosUtilizado(int contadorDeServicios[][CANTIDAD_SERVICIOS],i
 void inicializarEstructuraServicioDescuento(struct servicioDescuentoTotal s[]);
 void ordenar_burbuja(struct servicioDescuentoTotal acumuladorDescuentos[CANTIDAD_SERVICIOS]);
 int comparacion(const void *a, const void *b);
+void ingresoFacturas(struct Facturas fact[CANTIDAD_FACTURAS], int numeroRegistro);
+void inicializarTotalDescuentos(float v[][CANTIDAD_SERVICIOS]);
 #endif
