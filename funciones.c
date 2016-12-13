@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <assert.h>
 #include "header.h"
 #include "estructuras_datos.h"
@@ -104,7 +105,7 @@ void totalDescontadoPorServicio(float totalDescuentos[][CANTIDAD_SERVICIOS]){
     }
   }
   //ordenar
-  ordenar(acumuladorDescuentos);
+  qsort(acumuladorDescuentos, CANTIDAD_SERVICIOS, sizeof(struct servicioDescuentoTotal), comparacion);
   //imprimir
   for(i=0; i<CANTIDAD_SERVICIOS; i++){
     printf("total descontado servicio %d: %.2f\n", acumuladorDescuentos[i].numeroDeServicio + 1,
@@ -118,7 +119,7 @@ void inicializarEstructuraServicioDescuento(struct servicioDescuentoTotal s[]){
     s[i].montoTotalDeDescuento = 0;
   }
 }
-void ordenar(struct servicioDescuentoTotal acumuladorDescuentos[CANTIDAD_SERVICIOS]){
+void ordenar_burbuja(struct servicioDescuentoTotal acumuladorDescuentos[CANTIDAD_SERVICIOS]){
   int i,j;
   struct servicioDescuentoTotal aux;
 
@@ -126,6 +127,7 @@ void ordenar(struct servicioDescuentoTotal acumuladorDescuentos[CANTIDAD_SERVICI
   {
     for (j = 0 ; j < CANTIDAD_SERVICIOS - 1; j++)
     {
+
       if (acumuladorDescuentos[j].montoTotalDeDescuento < acumuladorDescuentos[j+1].montoTotalDeDescuento)
       {
         aux = acumuladorDescuentos[j];
@@ -134,4 +136,13 @@ void ordenar(struct servicioDescuentoTotal acumuladorDescuentos[CANTIDAD_SERVICI
       }
     }
   }
+}
+int comparacion(const void *a, const void *b)
+{
+  struct servicioDescuentoTotal *ia = (struct servicioDescuentoTotal*)a;
+  struct servicioDescuentoTotal *ib = (struct servicioDescuentoTotal*)b;
+  return (int)(100.f*ia->montoTotalDeDescuento - 100.f*ib->montoTotalDeDescuento);
+  /* float comparison: returns negative if b > a
+  and positive if a > b. We multiplied result by 100.0
+  to preserve decimal fraction */
 }
