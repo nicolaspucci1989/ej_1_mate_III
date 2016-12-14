@@ -45,12 +45,12 @@ void cargaDeFacturas(struct Facturas str[]){
   str[3].numeroDeServicio = 1;
   str[3].montoDeFactura = 90;
 
-  str[4].numeroDeFactura = 190;
+  str[4].numeroDeFactura = 3832;
   str[4].numeroDeProvincia = 2;
   str[4].numeroDeServicio = 0;
   str[4].montoDeFactura = 700;
 
-  str[5].numeroDeFactura = 748;
+  str[5].numeroDeFactura = 77293;
   str[5].numeroDeProvincia = 2;
   str[5].numeroDeServicio = 1;
   str[5].montoDeFactura = 30;
@@ -60,17 +60,17 @@ void cargaDeFacturas(struct Facturas str[]){
   str[6].numeroDeServicio = 0;
   str[6].montoDeFactura = 50;
 
-  str[7].numeroDeFactura = 110;
+  str[7].numeroDeFactura = 0;
   str[7].numeroDeProvincia = 1;
   str[7].numeroDeServicio = 2;
   str[7].montoDeFactura = 873;
 
-  str[8].numeroDeFactura = 293;
+  str[8].numeroDeFactura = 0;
   str[8].numeroDeProvincia = 2;
   str[8].numeroDeServicio = 2;
   str[8].montoDeFactura = 300;
 
-  str[9].numeroDeFactura = 389;
+  str[9].numeroDeFactura = 0;
   str[9].numeroDeProvincia = 2;
   str[9].numeroDeServicio = 1;
   str[9].montoDeFactura = 85;

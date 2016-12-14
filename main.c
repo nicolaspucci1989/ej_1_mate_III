@@ -14,6 +14,9 @@ int main()
   int opcion, numeroDeRegistro = 0;
   cargarMatrizDescuentos(descuentos);
   cargaDeFacturas(fact);
+  // inicializarFacturas(fact);
+  // imprimirFacturas(fact);
+
   while((opcion = menu()) != SALIDA) {
     switch (opcion) {
       case 1:

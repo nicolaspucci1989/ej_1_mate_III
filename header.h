@@ -20,4 +20,5 @@ void ordenar_burbuja(struct servicioDescuentoTotal acumuladorDescuentos[CANTIDAD
 int comparacion(const void *a, const void *b);
 void ingresoFacturas(struct Facturas fact[CANTIDAD_FACTURAS], int numeroRegistro);
 void inicializarTotalDescuentos(float v[][CANTIDAD_SERVICIOS]);
+void inicializarFacturas(struct Facturas s[]);
 #endif

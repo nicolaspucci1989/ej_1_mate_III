@@ -8,7 +8,7 @@ int buscarMaximo(int vector[])
 {
   int i, maximo, ubicacionMaximo=0;
   maximo = vector[0];
-  for(i=1; i<NELEMS(vector) + 1; i++){
+  for(i=1; i<CANTIDAD_PROVINCIAS; i++){
     if(vector[i] > maximo){
       maximo = vector[i];
       ubicacionMaximo = i;
@@ -19,12 +19,13 @@ int buscarMaximo(int vector[])
 
 int provinciaQueRecibioMasPrestaciones(struct Facturas *facturasDeTuristas)
 {
-  int i;
-  int acumuladorProvincias[3] = {0};
+  int i=0;
+  int acumuladorProvincias[CANTIDAD_PROVINCIAS] = {0};
   for(i = 0; i < CANTIDAD_FACTURAS; i++){
-    acumuladorProvincias[facturasDeTuristas[i].numeroDeProvincia]++;
+    if(facturasDeTuristas[i].numeroDeFactura){
+      acumuladorProvincias[facturasDeTuristas[i].numeroDeProvincia]++;
+    }
   }
-
   return buscarMaximo(acumuladorProvincias);
 }
 
@@ -95,9 +96,11 @@ void imprimirFacturas( struct Facturas facturasTuristas[] )
 {
   int i;
   for(i=0; i<CANTIDAD_FACTURAS; i++){
-    printf("Provincia %d Servicio %d Monto %2.f\n", facturasTuristas[i].numeroDeProvincia,
-                                                  facturasTuristas[i].numeroDeServicio,
-                                                  facturasTuristas[i].montoDeFactura);
+    printf("Numero de factura %d, Provincia %d, Servicio %d, Monto %2.f\n",
+                                                    facturasTuristas[i].numeroDeFactura,
+                                                    facturasTuristas[i].numeroDeProvincia,
+                                                    facturasTuristas[i].numeroDeServicio,
+                                                    facturasTuristas[i].montoDeFactura);
   }
 }
 
@@ -189,5 +192,13 @@ void ingresoFacturas(struct Facturas fact[CANTIDAD_FACTURAS], int numeroRegistro
     printf("Ingrese monto de factura\n");
     numeroRegistro++;
     printf("Ingrese numero de factura\n");
+  }
+}
+
+void inicializarFacturas(struct Facturas s[])
+{
+  int i;
+  for(i=0; i<CANTIDAD_FACTURAS; i++){
+    s[i].numeroDeFactura = 0;
   }
 }
