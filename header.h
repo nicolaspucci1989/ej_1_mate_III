@@ -21,4 +21,6 @@ int comparacion(const void *a, const void *b);
 void ingresoFacturas(struct Facturas fact[CANTIDAD_FACTURAS], int numeroRegistro);
 void inicializarTotalDescuentos(float v[][CANTIDAD_SERVICIOS]);
 void inicializarFacturas(struct Facturas s[]);
+void eliminarFactura(int facturaParaEliminar, struct Facturas fact[]);
+void ingresoDeFacturaParaEliminar(int *facturaParaEliminar);
 #endif

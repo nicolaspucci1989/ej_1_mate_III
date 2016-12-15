@@ -103,22 +103,29 @@ void imprimirFacturas( struct Facturas facturasTuristas[] )
 {
   int i;
   for(i=0; i<CANTIDAD_FACTURAS; i++){
-    printf("Numero de factura %d, Provincia %d, Servicio %d, Monto %2.f\n",
-                                                    facturasTuristas[i].numeroDeFactura,
-                                                    facturasTuristas[i].numeroDeProvincia,
-                                                    facturasTuristas[i].numeroDeServicio,
-                                                    facturasTuristas[i].montoDeFactura);
+    if(facturasTuristas[i].numeroDeFactura){
+      printf("Numero de factura %d, Provincia %d, Servicio %d, Monto %2.f\n",
+                                                      facturasTuristas[i].numeroDeFactura,
+                                                      facturasTuristas[i].numeroDeProvincia,
+                                                      facturasTuristas[i].numeroDeServicio,
+                                                      facturasTuristas[i].montoDeFactura);
+    }
   }
 }
 
 int menu()
 {
   int opcion;
-  printf("%s\n%s\n%s\n%s\n%s\n","1- Provincia que recibio mas prestaciones en general",
-														"2- Monto total descontado por cada provincia sobre cada tipo de servicio.",
-                            "3- Servicio mas utilizado para cada provincia.",
-														"4- Total descontado por cada tipo de servicio.",
-                            "0- Salida.");
+  printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n",
+        "1- Provincia que recibio mas prestaciones en general",
+      	"2- Monto total descontado por cada provincia sobre cada tipo de servicio.",
+        "3- Servicio mas utilizado para cada provincia.",
+      	"4- Total descontado por cada tipo de servicio.",
+        "5- Ingreso de facturas.",
+        "6- Eliminar factura.",
+        "7- Imprimir facturas.",
+        "0- Salida.");
+
   fflush(stdout);
   scanf("%d", &opcion);
   return opcion;
@@ -193,13 +200,12 @@ void ingresoFacturas(struct Facturas fact[CANTIDAD_FACTURAS], int numeroRegistro
 {
   printf("Ingrese numero de factura\n");
   scanf("%d", &fact[numeroRegistro].numeroDeFactura);
-  while(fact[numeroRegistro].numeroDeFactura){
-    printf("Ingrese numero de provincia\n");
-    printf("Ingrese numero de servicio\n");
-    printf("Ingrese monto de factura\n");
-    numeroRegistro++;
-    printf("Ingrese numero de factura\n");
-  }
+  printf("Ingrese numero de provincia\n");
+  scanf("%d", &fact[numeroRegistro].numeroDeProvincia);
+  printf("Ingrese numero de servicio\n");
+  scanf("%d", &fact[numeroRegistro].numeroDeServicio);
+  printf("Ingrese monto de factura\n");
+  scanf("%f", &fact[numeroRegistro].montoDeFactura);
 }
 
 void inicializarFacturas(struct Facturas s[])
@@ -208,4 +214,19 @@ void inicializarFacturas(struct Facturas s[])
   for(i=0; i<CANTIDAD_FACTURAS; i++){
     s[i].numeroDeFactura = 0;
   }
+}
+
+void eliminarFactura(int facturaParaEliminar, struct Facturas fact[])
+{
+  int i;
+  for(i = 0; i < CANTIDAD_FACTURAS; i++){
+    if(fact[i].numeroDeFactura == facturaParaEliminar){
+      fact[i].numeroDeFactura = 0;
+    }
+  }
+}
+
+void ingresoDeFacturaParaEliminar(int *facturaParaEliminar){
+  printf("Ingrese el numero de factura que desea eliminar.\n$ ");
+  scanf("%d", facturaParaEliminar);
 }
