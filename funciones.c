@@ -36,7 +36,8 @@ void totalDeDescuentoPorProvincia(struct Facturas facturasDeTuristas[],
   float porcentajeDescontar;
   int i, provincia, servicio;
 
-  for(i = 0; i < CANTIDAD_FACTURAS; i++){
+  for(i = 0; i < CANTIDAD_FACTURAS; i++)
+  {
     if(facturasDeTuristas[i].numeroDeFactura){
       provincia = facturasDeTuristas[i].numeroDeProvincia;
       servicio = facturasDeTuristas[i].numeroDeServicio;
@@ -60,12 +61,14 @@ void inicializarTotalDescuentos(float v[][CANTIDAD_SERVICIOS])
 void servicioMenosUtilizadoPorProvincia(struct Facturas facturasDeTuristas[], char **provincias)
 {
   int contadorDeServicios[CANTIDAD_PROVINCIAS][CANTIDAD_SERVICIOS] = {{0}};
-  int i, provincia, servicio;
+  int i;
   for(i = 0; i < CANTIDAD_FACTURAS; i++){
-    provincia = facturasDeTuristas[i].numeroDeProvincia;
-    servicio = facturasDeTuristas[i].numeroDeServicio;
-    contadorDeServicios[provincia][servicio]++;
+    if(facturasDeTuristas[i].numeroDeFactura){
+      contadorDeServicios[facturasDeTuristas[i].numeroDeProvincia]
+                         [facturasDeTuristas[i].numeroDeServicio]++;
+    }
   }
+  
   for(i = 0; i < CANTIDAD_PROVINCIAS; i++){
     printf("Servicio menos utlizado en %s, %d\n", provincias[i],
             buscarServicioMenosUtilizado(contadorDeServicios, i));

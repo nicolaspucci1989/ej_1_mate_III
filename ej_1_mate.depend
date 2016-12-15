@@ -11,7 +11,7 @@
 
 1481576077 l:\projects\c\ej_1_mate\estructuras_datos.h
 
-1481576834 source:l:\projects\c\ej_1_mate\funciones_carga.c
+1481759691 source:l:\projects\c\ej_1_mate\funciones_carga.c
 	<stdio.h>
 	<stdlib.h>
 	"header_carga.h"
@@ -21,7 +21,7 @@
 	"header_carga.h"
 	"estructuras_datos.h"
 
-1481759445 source:l:\projects\c\ej_1_mate\main.c
+1481760418 source:l:\projects\c\ej_1_mate\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>

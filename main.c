@@ -30,7 +30,7 @@ int main()
         /*2.	Monto total descontado por cada provincia sobre
         cada tipo de servicio*/
         inicializarTotalDescuentos(totalDescuentos); // Inicializa el acumulador de descuentos por provincia
-        totalDeDescuentoPorProvincia(fact, descuentos, totalDescuentos);
+        totalDeDescuentoPorProvincia(fact, descuentos, totalDescuentos); // acumula los descuentos en la matriz 
         imprimirDescuentos(totalDescuentos);
         break;
 
