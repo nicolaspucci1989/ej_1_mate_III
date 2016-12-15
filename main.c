@@ -29,7 +29,7 @@ int main()
       case 2:
         /*2.	Monto total descontado por cada provincia sobre
         cada tipo de servicio*/
-        inicializarTotalDescuentos(totalDescuentos);
+        inicializarTotalDescuentos(totalDescuentos); // Inicializa el acumulador de descuentos por provincia
         totalDeDescuentoPorProvincia(fact, descuentos, totalDescuentos);
         imprimirDescuentos(totalDescuentos);
         break;
@@ -49,7 +49,7 @@ int main()
 
       case 5:
         ingresoFacturas(fact, numeroDeRegistro);
-        
+
       default:
         puts("Opcion incorrecta");
         break;

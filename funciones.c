@@ -37,11 +37,13 @@ void totalDeDescuentoPorProvincia(struct Facturas facturasDeTuristas[],
   int i, provincia, servicio;
 
   for(i = 0; i < CANTIDAD_FACTURAS; i++){
-    provincia = facturasDeTuristas[i].numeroDeProvincia;
-    servicio = facturasDeTuristas[i].numeroDeServicio;
-    porcentajeDescontar = descuentos[provincia][servicio] / 100.0;
-    totalDescuentos[provincia][servicio] += facturasDeTuristas[i].montoDeFactura
-                                            * porcentajeDescontar;
+    if(facturasDeTuristas[i].numeroDeFactura){
+      provincia = facturasDeTuristas[i].numeroDeProvincia;
+      servicio = facturasDeTuristas[i].numeroDeServicio;
+      porcentajeDescontar = descuentos[provincia][servicio] / 100.0;
+      totalDescuentos[provincia][servicio] += facturasDeTuristas[i].montoDeFactura
+                                              * porcentajeDescontar;
+    }
   }
 }
 
@@ -51,7 +53,6 @@ void inicializarTotalDescuentos(float v[][CANTIDAD_SERVICIOS])
   for(i=0; i<CANTIDAD_PROVINCIAS; i++){
     for(j=0; j<CANTIDAD_SERVICIOS; j++){
       v[i][j] = 0;
-
     }
   }
 }
