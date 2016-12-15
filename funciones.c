@@ -62,13 +62,16 @@ void servicioMenosUtilizadoPorProvincia(struct Facturas facturasDeTuristas[], ch
 {
   int contadorDeServicios[CANTIDAD_PROVINCIAS][CANTIDAD_SERVICIOS] = {{0}};
   int i;
+
+  // Cuenta cuanotas veces se utilizo el servico por provincia
   for(i = 0; i < CANTIDAD_FACTURAS; i++){
     if(facturasDeTuristas[i].numeroDeFactura){
       contadorDeServicios[facturasDeTuristas[i].numeroDeProvincia]
                          [facturasDeTuristas[i].numeroDeServicio]++;
     }
   }
-  
+
+  // Imprime el servicio menos utilizado por provincia
   for(i = 0; i < CANTIDAD_PROVINCIAS; i++){
     printf("Servicio menos utlizado en %s, %d\n", provincias[i],
             buscarServicioMenosUtilizado(contadorDeServicios, i));
