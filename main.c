@@ -67,7 +67,7 @@ int main()
 
       case 7:
         // Imprimir facturas
-        imprimirFacturas(fact);
+        imprimirFacturas(fact, provincias);
       break;
 
       default:

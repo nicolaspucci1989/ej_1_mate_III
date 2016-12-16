@@ -22,18 +22,19 @@
 	"header_carga.h"
 	"estructuras_datos.h"
 
-1481808130 source:l:\projects\c\ej_1_mate\main.c
+1481930697 source:l:\projects\c\ej_1_mate\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	"header.h"
 	"header_carga.h"
 	"estructuras_datos.h"
+	"header_impresion.h"
 
-1481928069 l:\projects\c\ej_1_mate\header_impresion.h
+1481930661 l:\projects\c\ej_1_mate\header_impresion.h
 	"estructuras_datos.h"
 
-1481928050 source:l:\projects\c\ej_1_mate\funciones_impresion.c
+1481930756 source:l:\projects\c\ej_1_mate\funciones_impresion.c
 	<stdio.h>
 	<stdlib.h>
 	"estructuras_datos.h"
