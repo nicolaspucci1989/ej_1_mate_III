@@ -12,8 +12,6 @@ void servicioMenosUtilizadoPorProvincia(struct Facturas facturasDeTuristas[], ch
 void totalDescontadoPorServicio(float totalDescuentos[][CANTIDAD_SERVICIOS]);
 void cargarTablaDeDescuentos(float v[][CANTIDAD_SERVICIOS]);
 void cargarTablaFacturas(struct Facturas s[]);
-void imprimirDescuentos(float v[][CANTIDAD_SERVICIOS]);
-void imprimirFacturas( struct Facturas facturasTuristas[] );
 int buscarServicioMenosUtilizado(int contadorDeServicios[][CANTIDAD_SERVICIOS],int provincia);
 void inicializarEstructuraServicioDescuento(struct servicioDescuentoTotal s[]);
 void ordenar_burbuja(struct servicioDescuentoTotal acumuladorDescuentos[CANTIDAD_SERVICIOS]);

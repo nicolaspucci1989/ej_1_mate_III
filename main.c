@@ -4,6 +4,7 @@
 #include "header.h"
 #include "header_carga.h"
 #include "estructuras_datos.h"
+#include "header_impresion.h"
 
 int main()
 {
@@ -14,8 +15,8 @@ int main()
   int opcion, numeroDeRegistro = 0;
   int facturaParaEliminar;
   cargarMatrizDescuentos(descuentos);
-  // cargaDeFacturas(fact);
-  inicializarFacturas(fact);
+  cargaDeFacturas(fact);
+  // inicializarFacturas(fact);
   // imprimirFacturas(fact);
 
   while((opcion = menu()) != SALIDA) {
