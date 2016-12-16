@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1481928104 source:l:\projects\c\ej_1_mate\funciones.c
+1481931481 source:l:\projects\c\ej_1_mate\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<assert.h>
@@ -22,7 +22,7 @@
 	"header_carga.h"
 	"estructuras_datos.h"
 
-1481930697 source:l:\projects\c\ej_1_mate\main.c
+1481931457 source:l:\projects\c\ej_1_mate\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -31,10 +31,10 @@
 	"estructuras_datos.h"
 	"header_impresion.h"
 
-1481930661 l:\projects\c\ej_1_mate\header_impresion.h
+1481931323 l:\projects\c\ej_1_mate\header_impresion.h
 	"estructuras_datos.h"
 
-1481930756 source:l:\projects\c\ej_1_mate\funciones_impresion.c
+1481931551 source:l:\projects\c\ej_1_mate\funciones_impresion.c
 	<stdio.h>
 	<stdlib.h>
 	"estructuras_datos.h"

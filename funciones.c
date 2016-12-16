@@ -93,7 +93,7 @@ int buscarServicioMenosUtilizado(int contadorDeServicios[][CANTIDAD_SERVICIOS],i
 int menu()
 {
   int opcion;
-  printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n",
+  printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n",
         "1- Provincia que recibio mas prestaciones en general",
       	"2- Monto total descontado por cada provincia sobre cada tipo de servicio.",
         "3- Servicio mas utilizado para cada provincia.",
@@ -101,6 +101,7 @@ int menu()
         "5- Ingreso de facturas.",
         "6- Eliminar factura.",
         "7- Imprimir facturas.",
+        "8- Imprimir descuentos.",
         "0- Salida.");
 
   fflush(stdout);

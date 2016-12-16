@@ -2,13 +2,15 @@
 #include <stdlib.h>
 #include "estructuras_datos.h"
 
-void imprimirDescuentos(float v[][CANTIDAD_SERVICIOS])
+void imprimirDescuentos(float v[][CANTIDAD_SERVICIOS], char *provincias[])
 {
 	int i,j;
 	for(i=0; i<CANTIDAD_PROVINCIAS;i++){
+    printf("%s ", provincias[i]);
 		for(j=0; j<CANTIDAD_SERVICIOS; j++){
-			printf("elemento %d, %d: %.2f\n", i+1, j+1, v[i][j]);
+	    printf("%.2f ", v[i][j]);
 		}
+    printf("\n");
 	}
 } // fin funcion imprimirDescuentos
 

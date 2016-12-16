@@ -33,7 +33,7 @@ int main()
         cada tipo de servicio*/
         inicializarTotalDescuentos(totalDescuentos); // Inicializa el acumulador de descuentos por provincia
         totalDeDescuentoPorProvincia(fact, descuentos, totalDescuentos); // acumula los descuentos en la matriz
-        imprimirDescuentos(totalDescuentos);
+        imprimirDescuentos(totalDescuentos, provincias);
       break;
 
       case 3:
@@ -68,6 +68,11 @@ int main()
       case 7:
         // Imprimir facturas
         imprimirFacturas(fact, provincias);
+      break;
+
+      case 8:
+        // Imprimir facturas
+        imprimirDescuentos(descuentos, provincias);
       break;
 
       default:
