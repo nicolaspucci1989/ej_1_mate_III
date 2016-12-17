@@ -34,7 +34,7 @@
 1481931323 l:\projects\c\ej_1_mate\header_impresion.h
 	"estructuras_datos.h"
 
-1481931551 source:l:\projects\c\ej_1_mate\funciones_impresion.c
+1481980622 source:l:\projects\c\ej_1_mate\funciones_impresion.c
 	<stdio.h>
 	<stdlib.h>
 	"estructuras_datos.h"

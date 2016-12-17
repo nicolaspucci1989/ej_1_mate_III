@@ -6,7 +6,7 @@ void imprimirDescuentos(float v[][CANTIDAD_SERVICIOS], char *provincias[])
 {
 	int i,j;
 	for(i=0; i<CANTIDAD_PROVINCIAS;i++){
-    printf("%s ", provincias[i]);
+    printf("%-8s ", provincias[i]);
 		for(j=0; j<CANTIDAD_SERVICIOS; j++){
 	    printf("%.2f ", v[i][j]);
 		}
