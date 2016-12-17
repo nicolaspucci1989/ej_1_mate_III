@@ -10,7 +10,7 @@ void imprimirDescuentos(float v[][CANTIDAD_SERVICIOS], char *provincias[])
 		for(j=0; j<CANTIDAD_SERVICIOS; j++){
 	    printf("%.2f ", v[i][j]);
 		}
-    printf("\n");
+    putchar('\n');
 	}
 } // fin funcion imprimirDescuentos
 
