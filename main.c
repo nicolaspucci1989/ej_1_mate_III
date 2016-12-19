@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include "header.h"
 #include "header_carga.h"
 #include "estructuras_datos.h"
